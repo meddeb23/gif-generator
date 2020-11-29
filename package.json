@@ -1,10 +1,15 @@
 {
+  "homepage": "https://meddeb23.github.io/gif-generator/.",
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
+
     "test": "web-test-runner \"src/**/*.test.jsx\"",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
-    "lint": "prettier --check \"src/**/*.{js,jsx}\""
+    "lint": "prettier --check \"src/**/*.{js,jsx}\"",
+
+    "predeploy": "npm build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@ffmpeg/core": "^0.8.5",
